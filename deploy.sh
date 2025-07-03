@@ -64,49 +64,8 @@ if [[ -f "build.ts" && -f "package.json" ]]; then
     fi
 fi
 
-# Remove old Vim Mode Plus rules from Karabiner
-print_status "Checking for existing Vim Mode Plus rules..."
-KARABINER_CONFIG="$KARABINER_DIR/karabiner.json"
-
-if [[ -f "$KARABINER_CONFIG" ]]; then
-    # Create backup of karabiner.json
-    KARABINER_BACKUP="$KARABINER_DIR/karabiner_backup_$(date +%Y%m%d_%H%M%S).json"
-    print_status "Backing up Karabiner configuration..."
-    cp "$KARABINER_CONFIG" "$KARABINER_BACKUP"
-    
-    # Remove Vim Mode Plus rules using jq
-    if command -v jq &> /dev/null; then
-        print_status "Removing old Vim Mode Plus rules..."
-        temp_file=$(mktemp)
-        jq '
-            .profiles[].complex_modifications.rules = [
-                .profiles[].complex_modifications.rules[]? | 
-                select(.description | test("^\\(Vim [0-9]+/[0-9]+\\)"; "i") | not)
-            ]
-        ' "$KARABINER_CONFIG" > "$temp_file" && mv "$temp_file" "$KARABINER_CONFIG"
-        print_success "Removed old Vim Mode Plus rules"
-    else
-        print_warning "jq not found - you'll need to manually remove old Vim Mode Plus rules"
-    fi
-fi
-
-# Remove any existing Vim Mode Plus files in assets directory
-print_status "Cleaning up existing Vim Mode Plus files..."
-for file in "$ASSETS_DIR"/*.json; do
-    if [[ -f "$file" ]]; then
-        # Check if file contains Vim Mode Plus content
-        if jq -e '.title == "Vim Mode Plus"' "$file" >/dev/null 2>&1; then
-            BACKUP_FILE="$ASSETS_DIR/vim_backup_$(basename "$file" .json)_$(date +%Y%m%d_%H%M%S).json"
-            print_status "Backing up existing Vim Mode Plus file: $(basename "$file") -> $(basename "$BACKUP_FILE")"
-            cp "$file" "$BACKUP_FILE"
-            rm "$file"
-            print_status "Removed old Vim Mode Plus file: $(basename "$file")"
-        fi
-    fi
-done
-
 # Copy the new configuration
-print_status "Installing Vim Mode Plus configuration..."
+print_status "Deploying Vim Mode Plus configuration..."
 cp "vim_mode_plus.json" "$ASSETS_DIR/vim_mode_plus.json"
 
 # Verify installation
@@ -120,7 +79,7 @@ if [[ -f "$ASSETS_DIR/vim_mode_plus.json" ]]; then
     echo "4. Find 'Vim Mode Plus' in the list"
     echo "5. Add all rules IN ORDER (this is important!)"
     echo
-    print_warning "Remember to remove any old Vim Mode Plus rules first"
+    print_warning "If you have old Vim Mode Plus rules, remove them first"
     print_warning "The order of rules matters - add them in sequence"
 else
     print_error "Installation failed - file not copied correctly"
