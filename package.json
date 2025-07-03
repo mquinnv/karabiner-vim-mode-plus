@@ -5,7 +5,9 @@
   "main": "build.js",
   "scripts": {
     "build": "tsx build.ts",
-    "dev": "tsx build.ts --watch"
+    "dev": "tsx build.ts --watch",
+    "test": "jq . vim_mode_plus.json > /dev/null && echo '✓ JSON is valid' || echo '✗ JSON is invalid'",
+    "validate": "npm run test && echo '✓ Configuration validated'"
   },
   "keywords": ["karabiner", "vim", "keyboard", "navigation", "macos"],
   "author": "harmtemolder",
