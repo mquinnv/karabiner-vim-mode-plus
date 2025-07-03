@@ -1,0 +1,20 @@
+{
+  "name": "karabiner-vim-mode-plus",
+  "version": "1.0.0",
+  "description": "A complex modification for Karabiner Elements that mimics Vim's navigation throughout your entire Mac",
+  "main": "build.js",
+  "scripts": {
+    "build": "tsx build.ts",
+    "dev": "tsx build.ts --watch"
+  },
+  "keywords": ["karabiner", "vim", "keyboard", "navigation", "macos"],
+  "author": "harmtemolder",
+  "license": "MIT",
+  "devDependencies": {
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "js-yaml": "^4.1.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.5"
+  }
+}
