@@ -31,6 +31,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_unless
             value: 1
@@ -52,6 +54,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -70,6 +74,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -91,6 +97,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -109,6 +117,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -142,7 +152,7 @@ rules:
           - name: vim_mode
             type: variable_if
             value: 1
-  - description: (Vim 3/11) visual mode + h,j,k,l,e,b,0,^,$,gg,G,{,} + d,y,c,x
+  - description: (Vim 3/11) visual mode + h,j,k,l,e,w,b,0,^,$,gg,G,{,} + d,y,c,x
     manipulators:
       - type: basic  # [v] Enter visual mode
         from:
@@ -162,6 +172,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -186,6 +198,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -203,6 +217,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -220,6 +236,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -237,6 +255,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -254,6 +274,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -272,6 +294,36 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
+          - name: visual_mode
+            type: variable_if
+            value: 1
+      - type: basic  # [w] Select to next start of word
+        from:
+          key_code: w
+        to:
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: left_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -290,6 +342,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -312,6 +366,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -333,6 +389,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -354,6 +412,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -378,6 +438,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -402,6 +464,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -426,6 +490,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -447,6 +513,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -468,6 +536,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -492,6 +562,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -516,6 +588,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -540,6 +614,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -562,6 +638,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -580,6 +658,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -598,6 +678,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
@@ -616,10 +698,12 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: visual_mode
             type: variable_if
             value: 1
-  - description: (Vim 4/11) dd,de,db,d0,d^,d$,dgg,dG,d{,d}
+  - description: (Vim 4/11) dd,de,dw,db,d0,d^,d$,dgg,dG,d{,d},D
     manipulators:
       - type: basic
         from:
@@ -642,6 +726,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -675,6 +761,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -702,6 +790,45 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
+          - name: vim_mode
+            type: variable_if
+            value: 1
+          - name: d_pressed
+            type: variable_if
+            value: 1
+      - type: basic
+        from:
+          key_code: w
+        to:
+          - set_variable:
+              name: d_pressed
+              value: 0
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: left_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: x
+            modifiers:
+              - left_command
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -729,6 +856,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -760,6 +889,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -790,6 +921,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -820,6 +953,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -850,6 +985,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -880,6 +1017,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -910,6 +1049,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -940,6 +1081,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -966,13 +1109,15 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
           - name: d_pressed
             type: variable_if
             value: 1
-  - description: (Vim 5/11) yy,ye,yb,y0,y^,y$,ygg,yG,y{,y}
+  - description: (Vim 5/11) yy,ye,yw,yb,y0,y^,y$,ygg,yG,y{,y}
     manipulators:
       - type: basic
         from:
@@ -995,6 +1140,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1028,6 +1175,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1055,6 +1204,45 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
+          - name: vim_mode
+            type: variable_if
+            value: 1
+          - name: y_pressed
+            type: variable_if
+            value: 1
+      - type: basic
+        from:
+          key_code: w
+        to:
+          - set_variable:
+              name: y_pressed
+              value: 0
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: left_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: c
+            modifiers:
+              - left_command
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1082,6 +1270,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1113,6 +1303,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1143,6 +1335,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1173,6 +1367,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1203,6 +1399,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1233,6 +1431,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1263,6 +1463,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1293,6 +1495,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1323,13 +1527,15 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
           - name: y_pressed
             type: variable_if
             value: 1
-  - description: (Vim 6/11) cc,ce,cb,c0,c^,c$,cgg,cG,c{,c}
+  - description: (Vim 6/11) cc,ce,cw,cb,c0,c^,c$,cgg,cG,c{,c},C
     manipulators:
       - type: basic  # [c] Start change combination
         from:
@@ -1352,6 +1558,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1389,6 +1597,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1420,6 +1630,49 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
+          - name: vim_mode
+            type: variable_if
+            value: 1
+          - name: c_pressed
+            type: variable_if
+            value: 1
+      - type: basic  # [c,w] Cut word right and exit vim mode
+        from:
+          key_code: w
+        to:
+          - set_variable:
+              name: c_pressed
+              value: 0
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: left_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: x
+            modifiers:
+              - left_command
+          - set_variable:
+              name: vim_mode
+              value: 0
+          - shell_command: osascript -e 'display notification with title "-- INSERT --"'
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1451,6 +1704,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1486,6 +1741,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1520,6 +1777,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1554,6 +1813,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1584,6 +1845,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1618,6 +1881,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1652,6 +1917,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1686,6 +1953,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1720,6 +1989,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1740,6 +2011,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1758,6 +2031,64 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
+          - name: vim_mode
+            type: variable_if
+            value: 1
+      - type: basic  # [C] Change to end of line
+        from:
+          key_code: c
+          modifiers:
+            mandatory:
+              - shift
+        to:
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_command
+          - key_code: x
+            modifiers:
+              - left_command
+          - set_variable:
+              name: vim_mode
+              value: 0
+          - shell_command: osascript -e 'display notification with title "-- INSERT --"'
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
+          - name: vim_mode
+            type: variable_if
+            value: 1
+      - type: basic  # [D] Delete to end of line
+        from:
+          key_code: d
+          modifiers:
+            mandatory:
+              - shift
+        to:
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_command
+          - key_code: x
+            modifiers:
+              - left_command
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1775,6 +2106,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1795,6 +2128,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1812,6 +2147,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1833,10 +2170,12 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
-  - description: (Vim 8/11) h,j,k,l (+ control/option/command/shift),e,b,0,^,$,gg,G,{,}
+  - description: (Vim 8/11) h,j,k,l (+ control/option/command/shift),e,w,b,0,^,$,gg,G,{,}
     manipulators:
       - type: basic  # [h] Move cursor left
         from:
@@ -1856,6 +2195,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1877,6 +2218,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1898,6 +2241,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1919,6 +2264,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1936,6 +2283,33 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
+          - name: vim_mode
+            type: variable_if
+            value: 1
+      - type: basic  # [w] Move cursor to next start of word
+        from:
+          key_code: w
+        to:
+          - key_code: right_arrow
+            modifiers:
+              - left_alt
+          - key_code: right_arrow
+            modifiers:
+              - left_alt
+          - key_code: left_arrow
+            modifiers:
+              - left_alt
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1953,6 +2327,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1973,6 +2349,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -1993,6 +2371,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2013,6 +2393,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2037,6 +2419,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2060,6 +2444,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2083,6 +2469,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2103,6 +2491,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2123,6 +2513,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2143,6 +2535,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2167,6 +2561,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2185,6 +2581,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2209,6 +2607,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2231,6 +2631,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2257,6 +2659,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2278,6 +2682,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2297,6 +2703,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2316,6 +2724,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2336,6 +2746,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2354,6 +2766,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2372,6 +2786,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2390,6 +2806,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2408,6 +2826,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2426,6 +2846,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2444,6 +2866,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2462,6 +2886,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
@@ -2480,6 +2906,8 @@ rules:
               - com.github.atom
               - com.jetbrains.pycharm
               - com.visualstudio.code.oss
+              - com.jetbrains.intellij
+              - dev.warp.Warp-Stable
           - name: vim_mode
             type: variable_if
             value: 1
