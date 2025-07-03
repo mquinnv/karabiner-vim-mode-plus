@@ -94,11 +94,31 @@ key | action
 ## 2. Setting up
 
 1. Install Karabiner. (I used [this Homebrew cask](https://formulae.brew.sh/cask/karabiner-elements) through `brew cask install karabiner-elements`.)
-2. Import this complex modification straight into Karabiner through this link:
+
+2. **Easy Installation** (recommended):
+   ```bash
+   # Clone this repository
+   git clone https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus
+   cd karabiner-vim-mode-plus
+   
+   # Install dependencies and run installer
+   pnpm install
+   pnpm run install
+   ```
+
+3. **Manual Installation**:
+   Import this complex modification straight into Karabiner through this link:
 
     <a href="karabiner://karabiner/assets/complex_modifications/import?url=https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus/blob/master/vim_mode_plus.json" target="_blank">karabiner://karabiner/assets/complex_modifications/import?url=https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus/blob/master/vim_mode_plus.json</a>
 
     (You might have to copy and paste it into your browser's address bar if your browser does not render it as a clickable link.)
+
+4. **In Karabiner Elements**:
+   - Open Karabiner Elements Settings
+   - Go to "Complex modifications" tab  
+   - Click "Add rule"
+   - Find "Vim Mode Plus" in the list
+   - **Add all rules IN ORDER** (this is critical!)
 
 ## 3. Making changes
 
