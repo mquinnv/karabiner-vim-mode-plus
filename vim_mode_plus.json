@@ -520,6 +520,13 @@
                 "left_shift",
                 "left_alt"
               ]
+            },
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             }
           ],
           "conditions": [
@@ -3793,6 +3800,12 @@
             },
             {
               "key_code": "right_arrow",
+              "modifiers": [
+                "left_alt"
+              ]
+            },
+            {
+              "key_code": "left_arrow",
               "modifiers": [
                 "left_alt"
               ]
