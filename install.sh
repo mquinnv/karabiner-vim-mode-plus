@@ -90,12 +90,20 @@ if [[ -f "$KARABINER_CONFIG" ]]; then
     fi
 fi
 
-# Backup existing installation if it exists
-BACKUP_FILE="$ASSETS_DIR/vim_mode_plus_backup_$(date +%Y%m%d_%H%M%S).json"
-if [[ -f "$ASSETS_DIR/vim_mode_plus.json" ]]; then
-    print_status "Backing up existing configuration file to: $(basename "$BACKUP_FILE")"
-    cp "$ASSETS_DIR/vim_mode_plus.json" "$BACKUP_FILE"
-fi
+# Remove any existing Vim Mode Plus files in assets directory
+print_status "Cleaning up existing Vim Mode Plus files..."
+for file in "$ASSETS_DIR"/*.json; do
+    if [[ -f "$file" ]]; then
+        # Check if file contains Vim Mode Plus content
+        if jq -e '.title == "Vim Mode Plus"' "$file" >/dev/null 2>&1; then
+            BACKUP_FILE="$ASSETS_DIR/vim_backup_$(basename "$file" .json)_$(date +%Y%m%d_%H%M%S).json"
+            print_status "Backing up existing Vim Mode Plus file: $(basename "$file") -> $(basename "$BACKUP_FILE")"
+            cp "$file" "$BACKUP_FILE"
+            rm "$file"
+            print_status "Removed old Vim Mode Plus file: $(basename "$file")"
+        fi
+    fi
+done
 
 # Copy the new configuration
 print_status "Installing Vim Mode Plus configuration..."
