@@ -749,6 +749,10 @@ rules:
             modifiers:
               - left_shift
               - left_alt
+          - key_code: left_arrow
+            modifiers:
+              - left_shift
+              - left_alt
           - key_code: x
             modifiers:
               - left_command
@@ -1130,6 +1134,10 @@ rules:
               - left_shift
               - left_alt
           - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: left_arrow
             modifiers:
               - left_shift
               - left_alt
@@ -1526,6 +1534,10 @@ rules:
               - left_shift
               - left_alt
           - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_alt
+          - key_code: left_arrow
             modifiers:
               - left_shift
               - left_alt
