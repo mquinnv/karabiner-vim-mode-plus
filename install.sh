@@ -64,10 +64,36 @@ if [[ -f "build.ts" && -f "package.json" ]]; then
     fi
 fi
 
+# Remove old Vim Mode Plus rules from Karabiner
+print_status "Checking for existing Vim Mode Plus rules..."
+KARABINER_CONFIG="$KARABINER_DIR/karabiner.json"
+
+if [[ -f "$KARABINER_CONFIG" ]]; then
+    # Create backup of karabiner.json
+    KARABINER_BACKUP="$KARABINER_DIR/karabiner_backup_$(date +%Y%m%d_%H%M%S).json"
+    print_status "Backing up Karabiner configuration..."
+    cp "$KARABINER_CONFIG" "$KARABINER_BACKUP"
+    
+    # Remove Vim Mode Plus rules using jq
+    if command -v jq &> /dev/null; then
+        print_status "Removing old Vim Mode Plus rules..."
+        temp_file=$(mktemp)
+        jq '
+            .profiles[].complex_modifications.rules = [
+                .profiles[].complex_modifications.rules[]? | 
+                select(.description | test("^\\(Vim [0-9]+/[0-9]+\\)"; "i") | not)
+            ]
+        ' "$KARABINER_CONFIG" > "$temp_file" && mv "$temp_file" "$KARABINER_CONFIG"
+        print_success "Removed old Vim Mode Plus rules"
+    else
+        print_warning "jq not found - you'll need to manually remove old Vim Mode Plus rules"
+    fi
+fi
+
 # Backup existing installation if it exists
 BACKUP_FILE="$ASSETS_DIR/vim_mode_plus_backup_$(date +%Y%m%d_%H%M%S).json"
 if [[ -f "$ASSETS_DIR/vim_mode_plus.json" ]]; then
-    print_status "Backing up existing installation to: $(basename "$BACKUP_FILE")"
+    print_status "Backing up existing configuration file to: $(basename "$BACKUP_FILE")"
     cp "$ASSETS_DIR/vim_mode_plus.json" "$BACKUP_FILE"
 fi
 

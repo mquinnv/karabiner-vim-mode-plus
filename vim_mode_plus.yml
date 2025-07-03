@@ -142,7 +142,7 @@ rules:
           - name: vim_mode
             type: variable_if
             value: 1
-  - description: (Vim 3/11) visual mode + h,j,k,l,e,b,0,^,$,gg,G,{,} + d,y,c,x
+  - description: (Vim 3/11) visual mode + h,j,k,l,e,w,b,0,^,$,gg,G,{,} + d,y,c,x
     manipulators:
       - type: basic  # [v] Enter visual mode
         from:
@@ -641,7 +641,7 @@ rules:
           - name: visual_mode
             type: variable_if
             value: 1
-  - description: (Vim 4/11) dd,de,db,d0,d^,d$,dgg,dG,d{,d}
+  - description: (Vim 4/11) dd,de,dw,db,d0,d^,d$,dgg,dG,d{,d},D
     manipulators:
       - type: basic
         from:
@@ -1025,7 +1025,7 @@ rules:
           - name: d_pressed
             type: variable_if
             value: 1
-  - description: (Vim 5/11) yy,ye,yb,y0,y^,y$,ygg,yG,y{,y}
+  - description: (Vim 5/11) yy,ye,yw,yb,y0,y^,y$,ygg,yG,y{,y}
     manipulators:
       - type: basic
         from:
@@ -1413,7 +1413,7 @@ rules:
           - name: y_pressed
             type: variable_if
             value: 1
-  - description: (Vim 6/11) cc,ce,cb,c0,c^,c$,cgg,cG,c{,c}
+  - description: (Vim 6/11) cc,ce,cw,cb,c0,c^,c$,cgg,cG,c{,c},C
     manipulators:
       - type: basic  # [c] Start change combination
         from:
@@ -2007,7 +2007,7 @@ rules:
           - name: vim_mode
             type: variable_if
             value: 1
-  - description: (Vim 8/11) h,j,k,l (+ control/option/command/shift),e,b,0,^,$,gg,G,{,}
+  - description: (Vim 8/11) h,j,k,l (+ control/option/command/shift),e,w,b,0,^,$,gg,G,{,}
     manipulators:
       - type: basic  # [h] Move cursor left
         from:
