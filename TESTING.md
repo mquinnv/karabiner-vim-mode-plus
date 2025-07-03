@@ -8,8 +8,12 @@
    - Remove all existing "Vim Mode Plus" rules in order
 
 2. **Import new configuration**:
-   - Use the import URL: `karabiner://karabiner/assets/complex_modifications/import?url=https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus/blob/master/vim_mode_plus.json`
-   - Or manually import the `vim_mode_plus.json` file
+   - **For local testing**: Use this file URL in your browser:
+     ```
+     karabiner://karabiner/assets/complex_modifications/import?url=file:///Users/michael/Projects/karabiner-vim-mode-plus/vim_mode_plus.json
+     ```
+   - **Alternative**: In Karabiner Elements → Complex modifications → Add rule → Import more rules → Browse and select `vim_mode_plus.json`
+   - **For published version**: `karabiner://karabiner/assets/complex_modifications/import?url=https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus/blob/master/vim_mode_plus.json`
    - Add all rules **in order** (this is critical!)
 
 ## New Features to Test
