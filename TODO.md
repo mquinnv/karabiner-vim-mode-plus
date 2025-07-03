@@ -1,8 +1,7 @@
 # Project TODOs
 
 ## 🔥 Critical (High Priority)
-- [ ] Update README.md to document new 'w', 'C', 'D' commands
-- [ ] Test all new commands in Karabiner Elements
+- [ ] Follow TESTING.md checklist to validate all new commands work in Karabiner Elements
 
 ## 📋 Current Sprint/Phase
 - [ ] Consider adding more Vim motions (f, t, F, T for find/till)
@@ -26,12 +25,15 @@
 - [x] Create package.json with pnpm, TypeScript, and tsx dependencies
 - [x] Add .gitignore for proper file management
 - [x] Regenerate JSON configuration with all new features
+- [x] Update README.md to document new commands and build system
+- [x] Create comprehensive TESTING.md checklist
+- [x] Add JSON validation scripts to package.json
 
 ## 📊 Project Status
-**Current Focus**: Vim motion enhancements completed successfully  
-**Build System**: Migrated from Python to TypeScript with pnpm  
-**Testing Status**: Ready for Karabiner Elements testing  
-**Documentation**: Needs updates to reflect new commands  
+**Current Focus**: All requested Vim enhancements implemented and documented  
+**Build System**: Migrated from Python to TypeScript with pnpm and validation scripts  
+**Testing Status**: TESTING.md checklist created, awaiting real-world validation  
+**Documentation**: Updated with all new commands and build instructions  
 
 ---
 *Last updated: 2025-01-03*
