@@ -101,9 +101,9 @@ key | action
    git clone https://git.sr.ht/~harmtemolder/karabiner-vim-mode-plus
    cd karabiner-vim-mode-plus
    
-   # Install dependencies and run installer
+   # Install dependencies and deploy to Karabiner
    pnpm install
-   pnpm run install
+   pnpm run deploy
    ```
 
 3. **Manual Installation**:
