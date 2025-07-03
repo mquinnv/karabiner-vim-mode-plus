@@ -1880,6 +1880,58 @@ rules:
           - name: vim_mode
             type: variable_if
             value: 1
+      - type: basic  # [C] Change to end of line
+        from:
+          key_code: c
+          modifiers:
+            mandatory:
+              - shift
+        to:
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_command
+          - key_code: x
+            modifiers:
+              - left_command
+          - set_variable:
+              name: vim_mode
+              value: 0
+          - shell_command: osascript -e 'display notification with title "-- INSERT --"'
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+          - name: vim_mode
+            type: variable_if
+            value: 1
+      - type: basic  # [D] Delete to end of line
+        from:
+          key_code: d
+          modifiers:
+            mandatory:
+              - shift
+        to:
+          - key_code: right_arrow
+            modifiers:
+              - left_shift
+              - left_command
+          - key_code: x
+            modifiers:
+              - left_command
+        conditions:
+          - type: frontmost_application_unless
+            bundle_identifiers:
+              - com.googlecode.iterm2
+              - com.github.atom
+              - com.jetbrains.pycharm
+              - com.visualstudio.code.oss
+          - name: vim_mode
+            type: variable_if
+            value: 1
       - type: basic  # [p] Paste at cursor
         from:
           key_code: p
