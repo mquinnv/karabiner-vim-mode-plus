@@ -27,6 +27,7 @@ key | action
 <code>k</code> | Move cursor up*
 <code>l</code> | Move cursor right*
 <code>e</code> | Move cursor to next end of word
+<code>w</code> | Move cursor to next start of word
 <code>b</code> | Move cursor to previous start of word
 <code>0</code> | Move cursor to start of line (before any tabs)
 <code>^</code> | Move cursor to start of line (after any tabs)
@@ -44,6 +45,7 @@ key | action
 --- | ---
 <code>d</code>,<code>d</code> / <code>y</code>,<code>y</code> / <code>c</code>,<code>c</code> | Delete/yank/change the entire line
 <code>d</code>,<code>e</code> / <code>y</code>,<code>e</code> / <code>c</code>,<code>e</code> | Delete/yank/change to the next end of word |
+<code>d</code>,<code>w</code> / <code>y</code>,<code>w</code> / <code>c</code>,<code>w</code> | Delete/yank/change to the next start of word |
 <code>d</code>,<code>b</code> / ... / ... | Delete/yank/change to the previous start of word
 ... | Ditto for all other navigation keys mentioned above
 
@@ -53,6 +55,8 @@ key | action
 --- | ---
 <code>x</code> | Delete forward
 <code>X</code> | Delete back
+<code>C</code> | Change to end of line (same as <code>c</code>,<code>$</code>)
+<code>D</code> | Delete to end of line (same as <code>d</code>,<code>$</code>)
 <code>p</code> or <code>P</code> | Paste at cursor
 <code>u</code> | Undo
 <code>control</code>+<code>r</code> | Redo
@@ -102,7 +106,20 @@ key | action
 
 ## 3. Making changes
 
-I write my complex modifications in `YML` files, converting them into `JSON` using `yml-to-json.py`. You don't have to, but you can, if you want to. Either way, make sure to remove and re-add all parts of this mod in Karabiner's “Complex modifications” tab after making changes. The order they are in is important.
+I write my complex modifications in `YML` files, converting them into `JSON` using a TypeScript build script. You don't have to, but you can, if you want to. Either way, make sure to remove and re-add all parts of this mod in Karabiner's “Complex modifications” tab after making changes. The order they are in is important.
+
+To build the JSON file after making changes:
+
+```bash
+# Install dependencies (first time only)
+pnpm install
+
+# Build the JSON file
+pnpm run build
+
+# Or watch for changes and rebuild automatically
+pnpm run dev
+```
 
 ## 4. Reporting issues
 
